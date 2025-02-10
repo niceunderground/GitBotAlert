@@ -4,7 +4,7 @@ import pkg from 'sound-play';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 
-const { play } = pkg;  // Estraiamo la funzione play dal modulo
+const { play } = pkg;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -13,7 +13,6 @@ dotenv.config();
 
 const soundFile = join(__dirname, './stewie-crying-101soundboards.mp3');
 
-// Funzione per riprodurre il suono
 async function playSound() {
   try {
     await play(soundFile);
@@ -24,7 +23,6 @@ async function playSound() {
 
 let lastUpdateTime = null;
 
-// Funzione per controllare gli aggiornamenti
 async function checkUpdates() {
   try {
     const response = await fetch('https://api.bitbucket.org/2.0/repositories/testadigitalhub/palmieri', {
@@ -64,13 +62,10 @@ async function checkUpdates() {
   }
 }
 
-// Test iniziale del suono
 playSound();
 
-// Esegui il primo controllo immediatamente
 checkUpdates();
 
-// Poi controlla ogni 30 secondi
 setInterval(checkUpdates, 10000);
 
 console.log('Monitoraggio avviato. In attesa di aggiornamenti...');
