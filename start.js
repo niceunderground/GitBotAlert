@@ -25,7 +25,7 @@ let lastUpdateTime = null;
 
 async function checkUpdates() {
   try {
-    const response = await fetch('https://api.bitbucket.org/2.0/repositories/testadigitalhub/palmieri', {
+    const response = await fetch(`https://api.bitbucket.org/2.0/repositories/${process.env.WORKSPACE}/${process.env.REPOSITORY}`, {
       method: 'GET',
       headers: {
         'Authorization': `Bearer ${process.env.BITBUCKET_TOKEN}`,

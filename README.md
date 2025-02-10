@@ -28,9 +28,11 @@ git clone https://github.com/niceunderground/GitBotAlert
 npm install
 ```
 
-3. Create a `.env` file in the project root with your Bitbucket token:
+3. Create a `.env` file in the project root with:
 ```
-BITBUCKET_TOKEN=your_token_here
+- `BITBUCKET_TOKEN`: Your Bitbucket access token
+- `WORKSPACE`: Your Bitbucket workspace name
+- `REPOSITORY`: The repository name to monitor 
 ```
 
 ## Configuration
