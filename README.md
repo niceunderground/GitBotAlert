@@ -30,9 +30,9 @@ npm install
 
 3. Create a `.env` file in the project root with:
 ```
-BITBUCKET_TOKEN`: Your Bitbucket access token
-WORKSPACE`: Your Bitbucket workspace name
-REPOSITORY`: The repository name to monitor 
+BITBUCKET_TOKEN= Your Bitbucket access token
+WORKSPACE= Your Bitbucket workspace name
+REPOSITORY= The repository name to monitor 
 ```
 
 ## Configuration
